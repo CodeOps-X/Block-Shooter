@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Fortnite</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            background: linear-gradient(to bottom, #87CEEB, #228B22);
+        }
+
+        #health-bar, #shield-bar, #ammo-bar {
+            position: fixed;
+            left: 10px;
+            width: 200px;
+            height: 20px;
+            background-color: gray;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #health-bar {
+            top: 10px;
+        }
+
+        #shield-bar {
+            top: 40px;
+        }
+
+        #ammo-bar {
+            top: 70px;
+        }
+
+        #health-fill {
+            background-color: red;
+            height: 100%;
+        }
+
+        #shield-fill {
+            background-color: blue;
+            height: 100%;
+        }
+
+        #ammo-fill {
+            background-color: yellow;
+            height: 100%;
+        }
+
+        #kill-streak {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="health-bar">
+        <div id="health-fill"></div>
+    </div>
+    <div id="shield-bar">
+        <div id="shield-fill"></div>
+    </div>
+    <div id="ammo-bar">
+        <div id="ammo-fill"></div>
+    </div>
+    <div id="kill-streak">Kill Streak: 0</div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="game.js"></script>
+</body>
+</html>
